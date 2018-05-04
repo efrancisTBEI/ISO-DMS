@@ -1,0 +1,28 @@
+﻿<Window x:Name="windowLookup" x:Class="ISO_DMS.Lookup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISO_DMS"
+        mc:Ignorable="d"
+        Title="Lookup" Height="275" Width="292" WindowStyle="None" Loaded="windowLookup_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FFF9EE06"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="txtBlkBanner" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Lookup" VerticalAlignment="Top" Width="272" TextAlignment="Center"/>
+        <DataGrid x:Name="dgLookup" HorizontalAlignment="Left" Height="159" Margin="11,36,0,0" VerticalAlignment="Top" Width="271" SelectionChanged="dgLookup_SelectionChanged" MouseDoubleClick="dgLookup_MouseDoubleClick">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DodgerBlue"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="White"/>
+            </DataGrid.Resources>
+        </DataGrid>
+        <TextBox x:Name="txtLookup" HorizontalAlignment="Left" Height="22" Margin="11,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" GotFocus="txtLookup_GotFocus" LostFocus="txtLookup_LostFocus" TextChanged="txtLookup_TextChanged"/>
+        <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Left" Height="38" Margin="11,229,0,0" VerticalAlignment="Top" Width="133" Click="btnOK_Click" Style="{DynamicResource StyleButton}"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Height="38" Margin="149,229,0,0" VerticalAlignment="Top" Width="133" Click="btnCancel_Click" Style="{DynamicResource StyleButton}"/>
+
+    </Grid>
+</Window>

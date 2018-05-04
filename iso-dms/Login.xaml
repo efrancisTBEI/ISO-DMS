@@ -1,0 +1,28 @@
+﻿<Window x:Class="ISO_DMS.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISO_DMS"
+        mc:Ignorable="d"
+        Title="EMT Login" Height="179.159" Width="277.515" WindowStyle="None" ResizeMode="NoResize"  WindowStartupLocation="Manual" Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF3ABD09"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="textBlockLogin" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ISO-DMS Login" VerticalAlignment="Top" Width="258" Margin="10,0,0,0" FontSize="15" Height="25" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Payroll ID:" VerticalAlignment="Top" Width="258" Margin="10,24,0,0" FontSize="10"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" TabIndex="0" FontSize="20" GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="258" Margin="10,81,0,0" FontSize="10" Visibility="Hidden"/>
+        <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Left" Height="32" Margin="10,138,0,0" VerticalAlignment="Top" Width="119" TabIndex="2" Click="btnOK_Click" Style="{DynamicResource StyleButton}"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Height="32" Margin="146,138,0,0" VerticalAlignment="Top" Width="119" TabIndex="3" Click="btnCancel_Click" Style="{DynamicResource StyleButton}"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="258" TabIndex="1" Visibility="Hidden"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="258" Margin="10,76,0,0" FontSize="10"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" TabIndex="0" FontSize="20" LostFocus="txtPassword_LostFocus" GotFocus="txtPassword_GotFocus"/>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="ISO_DMS.SendEmail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISO_DMS"
+        mc:Ignorable="d"
+        Title="SendEmail" Height="221.591" Width="288.92" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF17E4EE"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="txtEmailAddress" HorizontalAlignment="Left" Height="20" Margin="10,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="20" Margin="10,6,0,0" TextWrapping="Wrap" Text="Recipient Email Address:" VerticalAlignment="Top" Width="264"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="20" Margin="10,57,0,0" TextWrapping="Wrap" Text="Attached Document:" VerticalAlignment="Top" Width="264"/>
+        <TextBlock x:Name="tBlkFileName" HorizontalAlignment="Left" Height="55" Margin="10,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Height="41" Margin="10,154,0,0" VerticalAlignment="Top" Width="120" Click="btnSend_Click" Style="{DynamicResource StyleButton}"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Height="41" Margin="154,154,0,0" VerticalAlignment="Top" Width="120" Click="btnCancel_Click" Style="{DynamicResource StyleButton}"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="20" Margin="10,200,0,0" TextWrapping="Wrap" Text="A security log entry is created for all sent emails." VerticalAlignment="Top" Width="264" Foreground="#FFF5CB0E"/>
+    </Grid>
+</Window>

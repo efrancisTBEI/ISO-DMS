@@ -1,0 +1,43 @@
+﻿<Page x:Class="ISO_DMS.SystemSetup"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISO_DMS"
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1368"
+      Title="SystemSetup" Loaded="Page_Loaded">
+
+    <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1" CornerRadius="8,8,8,8">
+  
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF1936F0" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="42" Margin="17,18,0,0" TextWrapping="Wrap" Text="ISO DMS System Setup" VerticalAlignment="Top" Width="318" Foreground="#FFE7F108" FontSize="30"/>
+        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Left" Height="36" Margin="340,21,0,0" VerticalAlignment="Top" Width="76" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Foreground="White" RenderTransformOrigin="1.474,0.597" Cursor="Hand" Click="button_Click" />
+        <Button x:Name="btnSecurityLog" HorizontalAlignment="Left" Height="76" Margin="19,433,0,0" VerticalAlignment="Top" Width="320" FontSize="20" Click="btnSecurityLog_Click" Style="{DynamicResource StyleButton}" >
+            <TextBlock Text="System Security Log"  TextWrapping="Wrap" TextAlignment="Center" FontSize="20"/>
+        </Button>
+        <Button x:Name="btnCreateUDCategories" HorizontalAlignment="Left" Margin="361,78,0,0" VerticalAlignment="Top" Width="320" Height="76" Click="btnCreateUDCategories_Click" Style="{DynamicResource StyleButton}">
+            <TextBlock Text="Create/Manage User Defined                 Categories"  TextWrapping="Wrap" TextAlignment="Center" FontSize="20"/>
+        </Button>
+        <Button x:Name="btnEditUsers" HorizontalAlignment="Left" Height="76" Margin="19,253,0,0" VerticalAlignment="Top" Width="320" FontSize="20" Click="btnEditUsers_Click" Style="{DynamicResource StyleButton}" >
+            <TextBlock Text="Edit User Security Levels"  TextWrapping="Wrap" TextAlignment="Center" FontSize="20"/>
+        </Button>
+        <DataGrid x:Name="dgDocumentCounts" HorizontalAlignment="Left" Height="251" Margin="701,78,0,0" VerticalAlignment="Top" Width="226" ColumnWidth="*" Background="Transparent" RowBackground="Transparent" Foreground="Yellow" HeadersVisibility="None" BorderBrush="Green"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="23" Margin="701,56,0,0" TextWrapping="Wrap" Text="Current Document Counts" VerticalAlignment="Top" Width="226" Background="Transparent" Foreground="Green" TextAlignment="Center"/>
+        <Button x:Name="btnManageHelpDocuments" HorizontalAlignment="Left" Height="76" Margin="19,342,0,0" VerticalAlignment="Top" Width="320" FontSize="20" Click="btnManageHelpDocuments_Click" Style="{DynamicResource StyleButton}" >
+            <TextBlock Text="Manage Help Documents"  TextWrapping="Wrap" TextAlignment="Center" FontSize="20"/>
+        </Button>
+        <Button x:Name="btnHelp" Content="Help" HorizontalAlignment="Left" Height="36" Margin="421,21,0,0" VerticalAlignment="Top" Width="76" Background="#FFFD1308" Foreground="White" RenderTransformOrigin="1.474,0.597" Cursor="Hand" Click="btnHelp_Click" />
+        <Button x:Name="btnManageDepartments" HorizontalAlignment="Left" Height="76" Margin="19,522,0,0" VerticalAlignment="Top" Width="320" FontSize="20" Click="btnManageDepartments_Click" Style="{DynamicResource StyleButton}" >
+            <TextBlock Text="Manage Departments"  TextWrapping="Wrap" TextAlignment="Center" FontSize="20"/>
+        </Button>
+
+    </Grid>
+    </Border>
+</Page>
